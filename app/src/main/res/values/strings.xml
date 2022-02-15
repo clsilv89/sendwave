@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SendWaveCodingTest</string>
+    <string name="text_input_hint_first_name">Recipient First Name</string>
+    <string name="text_input_hint_last_name">Recipient Last Name</string>
+    <string name="text_input_hint_ammunt">Amount in binary</string>
+    <string name="text_input_hint_phone_number">Recipient Phone Number</string>
+    <string name="button_send_text">send</string>
+
+    <string name="allowed_characters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáÁàÀÈÌÒÙãõÃÕçÇèìòùÉÍÓÚéíóú</string>
+</resources>

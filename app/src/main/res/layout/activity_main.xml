@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.sendwavecodingtest.viewmodel.MainActivityViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d56"
+            android:layout_margin="@dimen/d12"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_edit_first_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/allowed_characters"
+                android:hint="@string/text_input_hint_first_name"
+                android:maxLines="1"
+                android:text="@{viewModel.firstName}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_last_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d56"
+            android:layout_margin="@dimen/d12"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_first_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/text_input_edit_last_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="@string/allowed_characters"
+                android:hint="@string/text_input_hint_last_name"
+                android:inputType="text"
+                android:maxLines="1"
+                android:text="@{viewModel.lastName}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/spinner_country"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d56"
+            android:layout_marginHorizontal="@dimen/d12"
+            android:layout_marginTop="@dimen/d48"
+            android:spinnerMode="dropdown"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_last_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_phone"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d56"
+            android:layout_marginHorizontal="@dimen/d12"
+            android:layout_marginTop="@dimen/d32"
+            app:layout_constraintTop_toBottomOf="@id/spinner_country">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/text_input_hint_phone_number"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:text="@{viewModel.phoneNumber}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/text_input_layout_ammount"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/d56"
+            android:layout_marginHorizontal="@dimen/d12"
+            android:layout_marginTop="@dimen/d32"
+            app:layout_constraintTop_toBottomOf="@id/text_input_layout_phone">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textinput_edit_ammount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:digits="01"
+                android:hint="@string/text_input_hint_ammunt"
+                android:inputType="number"
+                android:maxLines="1"
+                android:text="@{viewModel.ammount}" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_get_conversion"
+            style="@style/Widget.PenguinPay.Button"
+            android:text="@string/button_send_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
