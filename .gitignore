@@ -1,0 +1,87 @@
+/local.properties
+.gradle
+/build
+/captures
+.externalNativeBuild
+fastlane/report.xml
+firebase
+instrumentation_output.txt
+app/release
+app/corban
+.idea/caches
+.idea/inspectionProfiles
+.idea/caches/*
+.idea/codeStyles/codeStyleConfig.xml
+.idea/shelf
+.idea/deploymentTargetDropDown.xml
+
+.DS_Store
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/misc.xml
+.idea/navEditor.xml
+.idea/jsLibraryMappings.xml
+/.idea/caches/build_file_checksums.ser
+/.idea/modules.xml
+.idea/codeStyles
+.idea/sonarlint
+
+.settings
+app/.settings
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+.idea/assetWizardSettings.xml
+.idea/runConfigurations.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### Intellij Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+*.iml
+# modules.xml
+
+app/.settings/org.eclipse.buildship.core.prefs
+.idea/assetWizardSettings.xml
+.idea/jarRepositories.xml
+.idea/jarRepositories.xml
+.idea/jarRepositories.xml
+.idea/assetWizardSettings.xml
+.idea/assetWizardSettings.xml
+.idea/assetWizardSettings.xml
+.idea/assetWizardSettings.xml
+.idea/assetWizardSettings.xml
+.idea/workspace.xml~
