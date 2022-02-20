@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">PenguinPay</string>
+    <string name="text_input_hint_first_name">Recipient First Name</string>
+    <string name="text_input_hint_last_name">Recipient Last Name</string>
+    <string name="text_input_hint_ammunt">Amount in binary</string>
+    <string name="text_input_hint_phone_number">Recipient Phone Number</string>
+    <string name="button_send_text">Send</string>
+    <string name="button_confirm_send_text">Confirm and send</string>
+    <string name="button_cancel_text">Cancel</string>
+
+    <string name="edit_text_phone_error">Please, provide a valid phone number</string>
+    <string name="edit_text_error">Please, provide a valid value</string>
+
+    <string name="allowed_characters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZáÁàÀÈÌÒÙãõÃÕçÇèìòùÉÍÓÚéíóú</string>
+    <string name="modal_header_text">Confirm the information of your transaction</string>
+</resources>

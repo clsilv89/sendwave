@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_80"
+        tools:context=".modulos.core.fragments.ModalGenericoAvisoFragment">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/d22"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/d8"
+            app:cardElevation="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textview_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/d32"
+                    android:gravity="center_horizontal"
+                    android:text="@string/modal_header_text"
+                    android:textSize="@dimen/s22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textview_ammount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/d24"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/teal_700"
+                    android:textSize="@dimen/s32"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textview_title"
+                    tools:text="KES 123 123 123" />
+
+                <TextView
+                    android:id="@+id/textview_recipient"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/d24"
+                    android:layout_marginTop="@dimen/d16"
+                    android:layout_marginEnd="@dimen/d24"
+                    android:layout_marginBottom="@dimen/d24"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/s22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_ammount"
+                    tools:text="John Doe" />
+
+                <TextView
+                    android:id="@+id/textview_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/d24"
+                    android:layout_marginTop="@dimen/d16"
+                    android:layout_marginEnd="@dimen/d24"
+                    android:layout_marginBottom="@dimen/d24"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/s22"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textview_recipient"
+                    tools:text="+245 987654321" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_margin="@dimen/d16"
+                    android:background="@color/white"
+                    app:layout_constraintBottom_toTopOf="@id/button_confirm"
+                    app:layout_constraintEnd_toEndOf="@id/button_confirm"
+                    app:layout_constraintStart_toStartOf="@id/button_confirm"
+                    app:layout_constraintTop_toBottomOf="@id/textview_phone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_confirm"
+                    style="@style/Widget.PenguinPay.Button"
+                    android:gravity="center"
+                    android:text="@string/button_confirm_send_text"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_cancel"
+                    style="@style/Widget.PenguinPay.Button.Cancel"
+                    android:gravity="center"
+                    android:text="@string/button_cancel_text"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_confirm" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

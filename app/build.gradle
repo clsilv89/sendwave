@@ -1,0 +1,74 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.sendwavecodingtest"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", "\"https://openexchangerates.org/api/\""
+            buildConfigField "String", "API_KEY", "d0c8c32151a242d2969eafba3ae92d27"
+        }
+        debug {
+            buildConfigField "String", "BASE_URL", "\"https://openexchangerates.org/api/\""
+            buildConfigField "String", "API_KEY", "\"d0c8c32151a242d2969eafba3ae92d27\""
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    viewBinding {
+        enabled = true
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+    implementation deps.kotlin.jdk
+    implementation deps.androidx.appcompat
+    implementation deps.androidx.constraint_layout
+    implementation deps.koin.core
+    implementation deps.koin.android
+
+    implementation deps.retrofit2.retrofit
+    implementation deps.retrofit2.gson
+
+    implementation deps.reactivex.rxjava2
+    implementation deps.reactivex.rxandroid
+    implementation deps.coroutines.rx2
+    implementation deps.okhttp3.interceptor
+    implementation deps.retrofit2.rx_adapter
+
+    implementation deps.moshi.moshi
+
+    implementation deps.material.material
+
+    androidTestImplementation deps.retrofit2.gson
+
+    androidTestImplementation deps.espresso.intents
+    androidTestImplementation deps.espresso.contrib
+}
